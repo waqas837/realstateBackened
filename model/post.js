@@ -10,7 +10,7 @@ const userSchema = mongoose.Schema({
     timestamps: true
 });
 
-autoIncrement.initialize(mongoose.connection);
+// autoIncrement.initialize(mongoose.connection);
 // userSchema.plugin(autoIncrement.plugin, 'post');
 // we need to turn it into a model
 const postUser = mongoose.model('post', userSchema);
