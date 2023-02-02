@@ -24,7 +24,9 @@ let myassets = path.join(__dirname, "uploads");
 app.use("/uploads", express.static(myassets));
 // Step 2 ------------------->
 app.use("/posts", Routes);
-
+app.get("/", (req, res) => {
+  res.send({ success: true, message: "backend is working" });
+});
 // https://www.mongodb.com/cloud/atlas
 // const USERNAME = process.env.USERNAME;
 // const PASSWORD = process.env.PASSWORD;
