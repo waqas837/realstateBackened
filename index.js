@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 
 // const URL = process.env.DB || "mongodb+srv://mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 // const URL = "mongodb://127.0.0.1:27017/myFirstDatabase";
-const URL = "mongodb+srv://waqasKhan:bughlani1122@cluster0.agwp7.mongodb.net/?retryWrites=true&w=majority"
+const URL = "mongodb+srv://waqasKhan:bughlani1122@cluster0.agwp7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 // const dotenv = require('dotenv'); //3 - but we need to tell express where to pick this port
 // It allows you to seperate your crediantials when we work in a collaborative environment
 const PORT = process.env.PORT || "8080"; //2 - get the port from env file, if not available pick 8080
