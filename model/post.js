@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import autoIncrement from 'mongoose-auto-increment';
+// import autoIncrement from 'mongoose-auto-increment';
 
 // how our document look like
 const userSchema = mongoose.Schema({
@@ -11,7 +11,7 @@ const userSchema = mongoose.Schema({
 });
 
 autoIncrement.initialize(mongoose.connection);
-userSchema.plugin(autoIncrement.plugin, 'post');
+// userSchema.plugin(autoIncrement.plugin, 'post');
 // we need to turn it into a model
 const postUser = mongoose.model('post', userSchema);
 
