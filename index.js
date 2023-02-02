@@ -32,22 +32,18 @@ app.get("/", (req, res) => {
 // const PASSWORD = process.env.PASSWORD;
 
 // const URL = process.env.DB || "mongodb+srv://mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const URL = "mongodb://127.0.0.1:27017/myFirstDatabase";
+// const URL = "mongodb://127.0.0.1:27017/myFirstDatabase";
+const URL = "mongodb+srv://waqasKhan:bughlani1122@cluster0.agwp7.mongodb.net/?retryWrites=true&w=majority"
 // const dotenv = require('dotenv'); //3 - but we need to tell express where to pick this port
 // It allows you to seperate your crediantials when we work in a collaborative environment
 const PORT = process.env.PORT || "8080"; //2 - get the port from env file, if not available pick 8080
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("crud-app/build"));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("crud-app/build"));
+// }
 
 mongoose
-  .connect(URL, {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  })
+  .connect(URL)
   .then(() => {
     // we need .then becausew
     //it returns a promise
