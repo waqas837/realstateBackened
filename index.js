@@ -52,11 +52,10 @@ mongoose
     // we need .then becausew
     //it returns a promise
     console.log("mongodb is connected");
-    app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
   })
   .catch((error) => {
     console.log("Error:", error.message);
   });
-
+  app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
 // We can do something like this or we can set it directly in the url as well
 // mongoose.set('useFindAndModify', false);
